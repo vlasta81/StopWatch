@@ -4,5 +4,5 @@
 
 A simple alternative to a stopwatch with the option to export data to CSV.
 
-ver. 1.0.0.1
+ver. 1.0.0.2
 
