@@ -44,6 +44,7 @@ namespace StopWatch.View.Statistics
             dateFromPicker.TabIndex = 0;
             dateFromPicker.Format = DateTimePickerFormat.Custom;
             dateFromPicker.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            dateFromPicker.Value = DateTime.Today;
             // 
             // dateToPicker
             // 
