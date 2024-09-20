@@ -1,4 +1,6 @@
-﻿namespace StopWatch.View.Statistics
+﻿using System.Windows.Forms;
+
+namespace StopWatch.View.Statistics
 {
     partial class StatisticsView
     {
@@ -40,6 +42,8 @@
             dateFromPicker.Name = "dateFromPicker";
             dateFromPicker.Size = new Size(176, 23);
             dateFromPicker.TabIndex = 0;
+            dateFromPicker.Format = DateTimePickerFormat.Custom;
+            dateFromPicker.CustomFormat = "yyyy-MM-dd HH:mm:ss";
             // 
             // dateToPicker
             // 
@@ -47,6 +51,8 @@
             dateToPicker.Name = "dateToPicker";
             dateToPicker.Size = new Size(176, 23);
             dateToPicker.TabIndex = 1;
+            dateToPicker.Format = DateTimePickerFormat.Custom;
+            dateToPicker.CustomFormat = "yyyy-MM-dd HH:mm:ss";
             // 
             // exportTypesComboBox
             // 

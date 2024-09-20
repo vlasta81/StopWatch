@@ -23,12 +23,12 @@ namespace StopWatch.View.Statistics
         {
             try
             {
-                endDate = endDate.Date.AddDays(1).AddTicks(-1);
+                //endDate = endDate.Date.AddDays(1).AddTicks(-1);
                 _db.Database.OpenConnection();
                 DateTime minDate = _db.ChangeLogs.Min(cl => cl.TimeStamp);
                 DateTime maxDate = _db.ChangeLogs.Max(cl => cl.TimeStamp);
                 var logsQuery = _db.ChangeLogs
-                    .Where(cl => cl.TimeStamp >= startDate.Date && cl.TimeStamp <= endDate)
+                    .Where(cl => cl.TimeStamp >= startDate && cl.TimeStamp <= endDate)
                     .OrderBy(cl => cl.TimeStamp);
                 List<ChangeLog>? logs = logsQuery.ToList();
                 if (logs.Count == 0)
@@ -156,8 +156,8 @@ namespace StopWatch.View.Statistics
 
         private void exportButton_Click(object sender, EventArgs e)
         {
-            DateTime fromDate = dateFromPicker.Value.Date;
-            DateTime toDate = dateToPicker.Value.Date;
+            DateTime fromDate = dateFromPicker.Value;
+            DateTime toDate = dateToPicker.Value;
             string? format = exportTypesComboBox.Text;
 
             if (format is not null)
