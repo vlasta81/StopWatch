@@ -1,6 +1,4 @@
-﻿using StopWatch.Properties;
-using System.Resources;
-
+﻿
 namespace StopWatch.View.Timer
 {
     partial class TimerView
@@ -40,6 +38,7 @@ namespace StopWatch.View.Timer
             pauseTimeLabel = new Label();
             elapsedTimeLabel = new Label();
             SuspendLayout();
+            
             // 
             // playStopButton
             // 

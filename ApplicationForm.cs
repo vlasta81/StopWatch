@@ -1,3 +1,4 @@
+using StopWatch.Libraries;
 using StopWatch.View.About;
 using StopWatch.View.Statistics;
 using StopWatch.View.Timer;
@@ -6,6 +7,8 @@ namespace StopWatch
 {
     public partial class ApplicationForm : Form
     {
+        public event Action? OnApplicationClosing;
+
         public bool AlwaysOnTop
         {
             get { return this.TopMost; }
@@ -56,6 +59,10 @@ namespace StopWatch
         private void aboutMenuItem_Click(object sender, EventArgs e)
         {
             NavigateTo(typeof(AboutView));
+        }
+        private void ApplicationForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            OnApplicationClosing?.Invoke();
         }
     }
 }

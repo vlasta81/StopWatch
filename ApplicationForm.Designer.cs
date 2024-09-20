@@ -90,6 +90,7 @@
             Name = "ApplicationForm";
             Text = "StopWatch";
             Load += ApplicationForm_Load;
+            FormClosing += ApplicationForm_FormClosing;
             menu.ResumeLayout(false);
             menu.PerformLayout();
             ResumeLayout(false);

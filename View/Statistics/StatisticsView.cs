@@ -1,19 +1,8 @@
-﻿using CsvHelper.Configuration;
-using CsvHelper;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using StopWatch.Entities;
 using StopWatch.Libraries;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-//using StopWatch.Libraries;
-using System.Diagnostics;
 
 namespace StopWatch.View.Statistics
 {

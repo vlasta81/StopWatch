@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Timers;
+﻿using System.Diagnostics;
 
 namespace StopWatch.Libraries
 {
@@ -22,15 +16,6 @@ namespace StopWatch.Libraries
 
         public event Action<StopWatchTimerState>? OnStateChange;
 
-        //public TimeSpan Elapsed 
-        //{ 
-        //    get
-        //    {
-        //        return GetElapsedTime(false);
-        //        //return _stopwatch.Elapsed;
-        //    }
-        //}
-
         public StopWatchTimer()
         {
             _stopwatch = new Stopwatch();
@@ -44,7 +29,6 @@ namespace StopWatch.Libraries
             _stopwatch.Reset();
         }
 
-        // Start stopwatch
         public bool Start()
         {
             if (!_stopwatch.IsRunning && !_isPaused)
@@ -56,7 +40,6 @@ namespace StopWatch.Libraries
             return false;
         }
 
-        // Pause stopwatch
         public bool Pause()
         {
             if (_stopwatch.IsRunning && !_isPaused)
@@ -70,7 +53,6 @@ namespace StopWatch.Libraries
             return false;
         }
 
-        // Unpause stopwatch
         public bool Unpause()
         {
             if (_isPaused)
@@ -84,7 +66,6 @@ namespace StopWatch.Libraries
             return false;
         }
 
-        // Stop stopwatch
         public bool Stop()
         {
             if (_stopwatch.IsRunning || _isPaused)
@@ -101,12 +82,10 @@ namespace StopWatch.Libraries
             return false;
         }
 
-        // Get elapsed time (with or without paused duration)
         public TimeSpan GetElapsedTime(bool withPause = false)
         {
             if (_isPaused)
             {
-                // If paused, calculate current total elapsed time till pause
                 if (withPause)
                 {
                     return _pausedTime;
@@ -118,7 +97,6 @@ namespace StopWatch.Libraries
             }
             else
             {
-                // If running, calculate total elapsed time
                 if (withPause)
                 {
                     return _stopwatch.Elapsed;

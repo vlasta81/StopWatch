@@ -9,13 +9,6 @@ namespace StopWatch
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-            //string dbPath = Path.Combine(appDataPath, "ActivityMonitor", "ActivityMonitor.db");
-            //if (!File.Exists(dbPath)) 
-            //{
-            //    File.Copy("ActivityMonitor.db", dbPath, true);
-            //}
-            //optionsBuilder.UseSqlite($"Data Source={dbPath}");
             optionsBuilder.UseSqlite($"Data Source=StopWatch.db");
         }
 
