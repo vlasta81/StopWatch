@@ -54,7 +54,7 @@ namespace StopWatch.View.Timer
             }
 
             InitializeComponent();
-
+            alwaysOnTopCheckBox.Checked = _form.AlwaysOnTop;
             _form.OnApplicationClosing += OnApplicationClosing_Event;
             pausePlayButton.Enabled = false;
             pausePlayButton.Image = _pauseImage;
