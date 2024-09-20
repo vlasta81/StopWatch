@@ -122,11 +122,11 @@
     <value>17, 17</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="play.Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\Resources\Play_32.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="pause.Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\Resources\Pause_32.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="play.Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\Resources\Play_32.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="stop.Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\Resources\Stop_32.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
