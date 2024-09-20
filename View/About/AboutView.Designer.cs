@@ -54,6 +54,7 @@
             githubLinkLabel.TabIndex = 1;
             githubLinkLabel.TabStop = true;
             githubLinkLabel.Text = "Github";
+            githubLinkLabel.LinkClicked += githubLinkLabel_LinkClicked;
             // 
             // poweredByLabel
             // 
@@ -73,6 +74,7 @@
             windowsFormsLinkLabel.TabIndex = 3;
             windowsFormsLinkLabel.TabStop = true;
             windowsFormsLinkLabel.Text = "Windows Forms";
+            windowsFormsLinkLabel.LinkClicked += windowsFormsLinkLabel_LinkClicked;
             // 
             // sqliteLinkLabel
             // 
@@ -83,6 +85,7 @@
             sqliteLinkLabel.TabIndex = 4;
             sqliteLinkLabel.TabStop = true;
             sqliteLinkLabel.Text = "SQLite";
+            sqliteLinkLabel.LinkClicked += sqliteLinkLabel_LinkClicked;
             // 
             // AboutView
             // 
